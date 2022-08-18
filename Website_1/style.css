@@ -1,0 +1,65 @@
+:root{
+    --maincolor:#90EE90;
+}
+#logo{
+    display: block;
+    text-align: center;
+}
+body > header > hr{
+    width:80%;
+}
+
+/*-------------------Menu--------------------*/
+.topnav{
+    text-align: center;
+}
+
+.topnav a{
+    display: inline-block;
+    color: var(--maincolor);
+    padding: 1rem 1rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    
+}
+.topnav a:hover{
+    background-color: var(--maincolor);
+    color: white;
+}
+
+.topnav .mobMemuIcon{
+    display: none;
+}
+
+/* meny chamburgerowe */
+@media screen and (max-width:800px){
+
+    .topnav{
+    text-align: left;
+    }
+
+    .topnav a:not(:first-child){
+    display: none;
+    }
+
+    .topnav a.mobMemuIcon{
+        display: block;
+        float: right;
+    }
+    /* rodzic nadrzedny musi posadac pozycje relative look down */
+    .topnav.responsive{
+        position: relative;
+    }
+    .topnav.responsive a.mobMemuIcon{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+/*tu to widac  */
+    .topnav.responsive a{
+        display: block;
+        text-align: left;
+        float: none;
+    }
+}
+/*-------------------Menu--------------------*/
